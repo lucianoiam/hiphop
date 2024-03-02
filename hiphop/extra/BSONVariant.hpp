@@ -26,7 +26,7 @@
 #include <initializer_list>
 
 #include "distrho/extra/String.hpp"
-#include "bson.h"
+#include "bson/bson.h"
 
 #include "VariantUtil.hpp"
 

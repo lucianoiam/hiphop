@@ -245,8 +245,8 @@ ifeq ($(WEB_UI),true)
   BASE_FLAGS += -DHIPHOP_INJECT_FRAMEWORK_JS
   endif
   ifeq ($(HIPHOP_SUPPORT_BSON), true)
-  BASE_FLAGS += -DHIPHOP_SUPPORT_BSON -I$(LIBBSON_PATH)/src/libbson/src/bson \
-				-I$(LIBBSON_PATH)/build/src/libbson/src/bson
+  BASE_FLAGS += -DHIPHOP_SUPPORT_BSON -I$(LIBBSON_PATH)/src/libbson/src \
+				-I$(LIBBSON_PATH)/build/src/libbson/src
   LINK_FLAGS += -L$(LIBBSON_BUILD_PATH)/src/libbson -lbson-static-1.0
   ifeq ($(WINDOWS),true)
 	LINK_FLAGS += -lWs2_32
@@ -380,7 +380,7 @@ ifeq ($(WEB_UI),true)
 ifeq ($(HIPHOP_NETWORK_UI),true)
 ifeq ($(HIPHOP_NETWORK_SSL), true)
 MBEDTLS_GIT_URL = https://github.com/ARMmbed/mbedtls
-MBEDTLS_GIT_TAG = v3.2.1
+MBEDTLS_GIT_TAG = v3.5.2
 MBEDTLS_PATH = $(HIPHOP_DEPS_PATH)/mbedtls
 MBEDTLS_BUILD_PATH = ${MBEDTLS_PATH}/library
 MBEDTLS_LIB_PATH = $(MBEDTLS_BUILD_PATH)/libmbedtls.a
@@ -409,7 +409,7 @@ endif
 ifeq ($(WEB_UI),true)
 ifeq ($(HIPHOP_NETWORK_UI),true)
 LWS_GIT_URL = https://github.com/warmcat/libwebsockets
-LWS_GIT_TAG = v4.3.2
+LWS_GIT_TAG = v4.3.3
 LWS_PATH = $(HIPHOP_DEPS_PATH)/libwebsockets
 LWS_BUILD_PATH = ${LWS_PATH}/build
 LWS_LIB_PATH = $(LWS_BUILD_PATH)/lib/libwebsockets.a
@@ -455,7 +455,7 @@ endif
 
 ifeq ($(HIPHOP_SUPPORT_BSON), true)
 LIBBSON_GIT_URL = https://github.com/mongodb/mongo-c-driver
-LIBBSON_GIT_TAG = 1.23.2
+LIBBSON_GIT_TAG = 1.26.0
 LIBBSON_PATH = $(HIPHOP_DEPS_PATH)/mongo-c-driver
 LIBBSON_BUILD_PATH = ${LIBBSON_PATH}/build
 LIBBSON_LIB_PATH = $(LIBBSON_BUILD_PATH)/src/libbson/libbson-static-1.0.a
@@ -556,7 +556,7 @@ endif
 ifeq ($(WASM_DSP),true)
 ifeq ($(HIPHOP_WASM_RUNTIME),wamr)
 WAMR_GIT_URL = https://github.com/bytecodealliance/wasm-micro-runtime
-WAMR_GIT_TAG = WAMR-1.1.1
+WAMR_GIT_TAG = WAMR-1.3.2
 WAMR_PATH = $(HIPHOP_DEPS_PATH)/wasm-micro-runtime
 WAMR_BUILD_PATH = ${WAMR_PATH}/build-$(HIPHOP_WASM_MODE)
 WAMR_LIB_PATH = $(WAMR_BUILD_PATH)/libvmlib.a
