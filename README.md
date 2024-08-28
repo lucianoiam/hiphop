@@ -2,6 +2,10 @@ Hip-Hop
 -------
 *High Performance Hybrid Audio Plugins*
 
+*Superseded by [dpfwebui](http://github.com/lucianoiam/dpfwebui).
+The new project is a scaled down version (no DSP, only UI) with a
+permissive ISC license.*
+
 This project builds on top of the [DPF](http://github.com/DISTRHO/DPF) audio
 plugin framework to add web-based UI support. Plugins can leverage JavaScript
 and related tech to provide complex user interfaces on the computer running
